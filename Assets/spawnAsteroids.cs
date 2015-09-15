@@ -6,6 +6,7 @@ public class spawnAsteroids : MonoBehaviour {
 	public int amount;
 	private float lastSpawn;
 	public float spawnDelay;
+	public GameObject asteroid;
 
 	void Start () {
 		for (int i = 0; i < amount; i++){
@@ -23,6 +24,6 @@ public class spawnAsteroids : MonoBehaviour {
 	}
 
 	void SpawnAsteroid(){
-		Instantiate (Resources.Load ("asteroid", typeof(GameObject)) as GameObject, new Vector2 (Random.Range (-7, 7), Random.Range (-5, 5)), Quaternion.identity);
+		Instantiate (asteroid, new Vector2 (Random.Range (-7, 7), Random.Range (-5, 5)), Quaternion.identity);
 	}
 }

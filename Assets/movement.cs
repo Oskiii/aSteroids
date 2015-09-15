@@ -5,7 +5,7 @@ using System.Collections;
 public class movement : MonoBehaviour {
 
 	private Rigidbody2D rib;
-	public GameObject ammo;
+
 	public float maxSpeed;
 	public float maxRot;
 
@@ -42,11 +42,5 @@ public class movement : MonoBehaviour {
 
 	}
 
-	void Update (){
-		if (Input.GetButtonDown ("Fire1") == true) {
-			GameObject bullet = (GameObject)Instantiate (ammo, transform.position, transform.rotation);
-			bullet.GetComponent<Rigidbody2D> ().AddRelativeForce ((rib.velocity + new Vector2 (0f, 200f)), 0);
-			Destroy(bullet, 5f);
-		}
-	}
+
 }

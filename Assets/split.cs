@@ -16,7 +16,7 @@ public class split : MonoBehaviour {
 			GameObject asteroidShard = (GameObject) Instantiate (asteroid, transform.position, transform.rotation);
 			asteroidShard.GetComponent<Rigidbody2D>().velocity = new Vector2(Random.Range (-1f,1f), Random.Range(-1f,1f));
 			rib.velocity = new Vector2(Random.Range (-1f,1f), Random.Range(-1f,1f));
-			Destroy (collider);
+			collider.gameObject.SetActive(false);
 
 
 
