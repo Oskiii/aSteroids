@@ -49,6 +49,7 @@
      <Compile Include="Assets\ObjectPooler.cs" />
      <Compile Include="Assets\Shoot.cs" />
      <Compile Include="Assets\bulletDestroy.cs" />
+     <Compile Include="Assets\killShip.cs" />
      <Compile Include="Assets\movement.cs" />
      <Compile Include="Assets\resetpos.cs" />
      <Compile Include="Assets\scoring.cs" />

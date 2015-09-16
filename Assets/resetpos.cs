@@ -3,7 +3,7 @@ using System.Collections;
 
 public class resetpos : MonoBehaviour {
 
-	public float limitx = 7;
+	public float limitx = 7.8f;
 	public float limity = 5.2f;
 
 

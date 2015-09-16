@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class split : MonoBehaviour {
 
 	Rigidbody2D rib;
 	public GameObject asteroid;
+	public Text scoreText;
+	public int scorePerAsteroid;
 
 	void Start () {
 		rib = GetComponent<Rigidbody2D>();
@@ -18,6 +21,7 @@ public class split : MonoBehaviour {
 			rib.velocity = new Vector2(Random.Range (-1f,1f), Random.Range(-1f,1f));
 			collider.gameObject.SetActive(false);
 
+			scoring.current.AddPoints(9 + scoring.current.level);
 
 
 			gameObject.transform.localScale = new Vector3(gameObject.transform.localScale.x/2, gameObject.transform.localScale.y/2, gameObject.transform.localScale.z/2);
